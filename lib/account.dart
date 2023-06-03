@@ -5,8 +5,10 @@ class sign_up extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Signup",
       home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+        ),
         body: Container(
           width: double.infinity,
           height: double.infinity,
