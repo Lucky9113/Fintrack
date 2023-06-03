@@ -1,3 +1,4 @@
+import 'package:fintrack/login.dart';
 import 'package:fintrack/signup.dart';
 import 'package:flutter/material.dart';
 
@@ -36,6 +37,25 @@ class MyApp extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => sign_up(),
+                ),
+              );
+            },
+          ),
+        ),
+      ),
+      floatingActionButton: Align(
+        alignment: const Alignment(0.56, 0.53),
+        child: SizedBox(
+          height: 35,
+          width: 35,
+          child: FloatingActionButton(
+            backgroundColor: Colors.transparent,
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) {
+                    return login();
+                  },
                 ),
               );
             },
