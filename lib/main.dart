@@ -6,7 +6,7 @@ void main() {
     MaterialApp(
       home: MyApp(),
       theme: ThemeData(
-          appBarTheme: AppBarTheme(backgroundColor: Colors.transparent)),
+          appBarTheme: const AppBarTheme(backgroundColor: Colors.transparent)),
       debugShowCheckedModeBanner: false,
       title: "Main",
     ),
@@ -25,20 +25,21 @@ class MyApp extends StatelessWidget {
               image: AssetImage("images/background.jpg"), fit: BoxFit.cover),
         ),
         child: Align(
-          alignment: Alignment(0.03, 0.325),
+          alignment: const Alignment(0.03, 0.325),
           child: TextButton(
-              child: const Text(
-                "Sign Up",
-                style: TextStyle(color: Colors.transparent, fontSize: 28),
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => sign_up(),
-                  ),
-                );
-              }),
+            child: const Text(
+              "Sign Up",
+              style: TextStyle(color: Colors.transparent, fontSize: 28),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => sign_up(),
+                ),
+              );
+            },
+          ),
         ),
       ),
     );
