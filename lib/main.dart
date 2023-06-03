@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:fintrack/login.dart';
 import 'package:fintrack/signup.dart';
 import 'package:flutter/material.dart';
@@ -28,10 +30,7 @@ class MyApp extends StatelessWidget {
         child: Align(
           alignment: const Alignment(0.03, 0.325),
           child: TextButton(
-            child: const Text(
-              "Sign Up",
-              style: TextStyle(color: Colors.transparent, fontSize: 28),
-            ),
+            child: newMethod(),
             onPressed: () {
               Navigator.push(
                 context,
@@ -62,6 +61,13 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  Text newMethod() {
+    return const Text(
+      "Sign Up",
+      style: TextStyle(color: Colors.transparent, fontSize: 28),
     );
   }
 }

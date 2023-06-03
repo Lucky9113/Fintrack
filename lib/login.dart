@@ -1,3 +1,4 @@
+import 'package:fintrack/signup.dart';
 import 'package:flutter/material.dart';
 
 class login extends StatelessWidget {
@@ -25,6 +26,22 @@ class login extends StatelessWidget {
           decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage("images/login.jpg"), fit: BoxFit.cover),
+          ),
+        ),
+        floatingActionButton: Align(
+          alignment: const Alignment(0.65, 0.94),
+          child: SizedBox(
+            child: FloatingActionButton(
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (context) => sign_up(),
+                  ),
+                );
+              },
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+            ),
           ),
         ),
       ),
